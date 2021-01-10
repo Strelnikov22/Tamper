@@ -1,0 +1,50 @@
+$blue: #384C85;
+$purple: #551A8B; 
+$white: #FFFFFF;
+$red: #7F2F4A;
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+$font: 'Abel', sans-serif;
+
+%bg {
+    background: {
+        repeat: no-repeat;
+        position: center top;
+        size:cover;
+    }
+}
+
+%text-section-white {
+    color: $white;
+}
+%text-section-blue {
+    color: $blue;
+}
+
+
+%flex-active{
+    display: flex;
+}
+
+@mixin tablet() {
+    @media screen and (max-width:768px) {
+        @content;
+    }
+}
+
+@mixin phone() {
+    @media screen and (max-width:520px) {
+        @content;
+    }
+}
+
+
+// @mixin bg($img) {
+//     background: {
+//         image: url($img);
+//         repeat: no-repeat;
+//         position: center top;
+//         size:cover;
+//     }
+// }

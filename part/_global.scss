@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body{
+    font:{
+        family: $font;
+        size: 24px;
+    }
+    line-height: 1.5em;
+    letter-spacing: 0.1em;
+}
+section{
+   min-height: 512px;
+   padding: 100px 0px; 
+   
+   @include phone {
+    min-height: inherit;
+    height: auto;
+}
+}
+.container{
+    @extend %flex-active;
+    flex-direction: row;
+    max-width: 940px;
+    width: 95%;
+    margin: 0px auto;
+    @include phone{
+        justify-content: center;
+    }
+}
+a{
+    text-decoration: none;
+    @extend %text-section-white;
+}
+li{
+    list-style-type: none;
+}
+.about__item h1{
+    font-weight: 400;
+    font-size: 36px;
+    text-transform: uppercase;  
+    margin-bottom: 25px;
+}
+.about__item{
+    width: 400px;
+    @include tablet{
+        margin: 0px 10px;
+    }
+    @include phone{
+        text-align: center;
+    }
+}
+button{
+    background-color:transparent;
+    @extend %text-section-white;
+    font:{
+        family: $font;
+        size: 24px;
+    }
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border: 1px solid $white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition-duration: 0.4s;
+}
+button:hover {
+    background-color: $white; 
+    @extend %text-section-blue;
+}
+.apps1>.container, .apps2>.container{
+    justify-content: flex-end;
+}

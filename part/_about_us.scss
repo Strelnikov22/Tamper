@@ -1,0 +1,16 @@
+.about_us{
+    @extend %text-section-blue;
+}
+.about_us>.container{
+    justify-content: space-between;
+    @include phone{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about__item{
+        @include phone{
+            margin: 60px auto 0px auto;
+        }
+    }
+}

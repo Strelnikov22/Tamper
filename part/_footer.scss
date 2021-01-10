@@ -1,0 +1,31 @@
+.footer{
+    min-height: 231px;
+    background-color: $blue;
+    @extend %text-section-white;
+    @include phone {
+        min-height: 231px;
+        height: auto;
+    }
+}
+.footer>.container{
+    justify-content: space-between;
+    align-content: center;
+    @include tablet{
+        flex-direction: column;
+    }
+}
+.footer>.container>button{
+    width: auto;
+    margin-top: 0;
+    @include tablet{
+        width: 256px;
+        margin: 30px auto 0px auto;
+    }
+}
+.footer .about__item{
+    @include tablet{
+        margin: 0px auto;
+        text-align: center;
+        
+}
+}

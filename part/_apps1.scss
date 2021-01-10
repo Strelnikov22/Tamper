@@ -1,0 +1,19 @@
+.apps1{
+    @extend %bg;
+    @extend %text-section-white;
+    background-image: url(img/bg_apps1.jpg);  
+    .container{
+        @include tablet{
+            justify-content: center;
+        }
+        @include phone{
+            justify-content: center;
+        }
+        .about__item{
+            @include tablet{
+                text-align: center;
+            }
+        }
+    }
+}
+

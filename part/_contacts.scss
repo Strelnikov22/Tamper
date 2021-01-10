@@ -1,0 +1,32 @@
+.contacts{
+    @extend %text-section-blue;
+    .container{
+        @include phone{
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+.contacts>.container>.about__item{
+    min-width: 300px;
+    width: auto;
+    @include tablet{
+        min-width: 230px;
+    }
+    @include phone{
+        margin-top: 60px;
+    }
+}
+.contacts>.container>.about__item:nth-child(1){
+    flex-grow: 150;
+    @include tablet{
+     flex-grow: 1;   
+    }
+}
+.contacts>.container>.about__item:nth-child(2){
+    flex-grow: 1;
+    p{
+        color: $red;
+    }
+    
+}
